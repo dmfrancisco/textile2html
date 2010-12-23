@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>Textile2HTML / Convert textile files to HTML</title>
+
+  <!-- Some CSS -->
+  <style type="text/css">
+    body {
+      background-color: #f5f5f6;
+      color: #222;
+      padding-left: 25px;
+      padding-top: 20px;
+      font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', helvetica, arial, sans-serif;
+      font-size: 10pt;
+      text-shadow: #fff 0px 1px 0px;
+    }
+    table { font-size:10pt; width:70%; }
+    h1    { padding-top:25px; font-size: 24pt; }
+    h2    { padding-top:25px; }
+    #preview { height:100%; }
+  </style>
+
+  <script type="text/javascript" src="/textile.js"></script>
+</head>
+
+<body>
+  <div id="preview">
+    <h1 style="border-bottom:2px dotted black; display:inline">Hello! First time here?</h1>
+
+    <h2>If you want to convert your textile file to html, type a url like this one:</h2>
+    <p style="font-size:13pt"><ins>http://textile2html.heroku.com?http://some-domain.com/my-file.textile</ins></p>
+
+    <h2>Here&#8217;s a real example:</h2>
+    <p style="font-size:13pt"><a href="http://textile2html.heroku.com?http://dmfranc.com/textile/example.textile">http://textile2html.heroku.com?http://dmfranc.com/textile/example.textile</a></p>
+
+    <br />
+    <p style="color:gray"><a href="http://dmfranc.com/textile/textile2html.zip" style="color:gray">Download</a> the source code. Powered by <a href="http://www.sinatrarb.com/" style="color:gray">Sinatra</a>.</p>
+  </div>
+
+  <script type="text/javascript">
+    <% content = get_content(get_url) %>
+    <% if content != "" %>
+    document.getElementById('preview').innerHTML = convert(
+      "<%= get_content(get_url) %>"
+    );
+    <% end %>
+  </script>
+
+</body>
+
+</html>
