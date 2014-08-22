@@ -2,7 +2,7 @@ p. This was the result of a simple experiment. You can see my original post "her
 
 h3. Online version
 
-p. "Textile2HTML / Convert textile files to HTML":http://textile2html.heroku.com/
+p. "Textile2HTML / Convert textile files to HTML":http://textile2html.herokuapp.com/
 
 h3. Credits
 

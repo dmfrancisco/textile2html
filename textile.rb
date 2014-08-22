@@ -29,8 +29,8 @@ helpers do
     open(url) do |src|
       return parse(src.read)
     end
-    rescue
-      return ""
+  rescue
+    return ""
   end
 end
 
